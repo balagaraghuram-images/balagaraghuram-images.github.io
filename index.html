@@ -3,56 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>balagaraghuram-images | Image Gallery</title>
-    <meta name="description" content="Photo gallery of Balaga Raghuram - Data Scientist at NHS England. All 54 images: Cambridge, Oxford, Edinburgh, London, Manchester and more.">
+    <title>balagaraghuram-images | Balaga Raghuram Images &amp; Photo Gallery</title>
+    <meta name="description" content="Welcome to the image gallery of Balaga Raghuram. Key photos: conferences at the University of Cambridge and Oxford, Manchester tech meetups and UK travel.">
     <link rel="canonical" href="https://balagaraghuram-images.github.io/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Balaga Raghuram Images">
+    <meta property="og:title" content="Welcome to Image Gallery of Balaga Raghuram">
+    <meta property="og:description" content="Key photos of Balaga Raghuram - conferences at Cambridge and Oxford, tech meetups and UK travel.">
+    <meta property="og:url" content="https://balagaraghuram-images.github.io/">
+    <meta property="og:image" content="https://balagaraghuram-images.github.io/images/balagaraghuram_cambridgeuniversity_conference.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Welcome to Image Gallery of Balaga Raghuram">
+    <meta name="twitter:description" content="Key photos of Balaga Raghuram - Cambridge, Oxford, tech meetups and UK travel.">
     <style>
-        :root{--bg:#111;--panel:#212;--text:#e6edf3;--muted:#9aa7b4;--accent:#4dabf7;--line:#333;--radius:8px;}
+        :root{--bg:#fafafa;--panel:#ffffff;--text:#212121;--muted:#666666;--accent:#0d6efd;--line:#e0e0e0;--radius:8px}
         *{box-sizing:border-box;margin:0;padding:0}
         html{scroll-behavior:smooth}
         body{background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6}
-        a{color:var(--accent)}
-        .wrap{max-width:1200px;margin:0 auto;padding:0 20px}
-        header{padding:20px 0;border-bottom:1px solid var(--line)}
+        a{color:var(--accent);text-decoration:none}
+        .wrap{max-width:1150px;margin:0 auto;padding:0 20px}
+        header{padding:20px 0;border-bottom:1px solid var(--line);background:#fff}
         .nav{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
-        .brand{font-weight:700;letter-spacing:.3px;text-decoration:none;color:var(--text)}
-        .nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-size:.95rem}
+        .brand{font-weight:700;color:var(--text);font-size:1rem}
+        .nav a{color:var(--muted);margin-left:18px;font-size:.95rem}
         .nav a:hover{color:var(--text)}
-        .hero{padding:32px 0;text-align:center;background:#1a1a2e}
-        h1{font-size:clamp(1.8rem,4vw,2.5rem);margin-bottom:8px;color:#fff}
-        h1 em{color:var(--accent);font-style:normal}
-        .intro{max-width:720px;margin:0 auto 24px;color:var(--muted);font-size:1.05rem}
-        .count{color:var(--muted);font-size:.9rem;margin-bottom:16px}
-        .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;padding-bottom:48px}
-        figure{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:.2s;cursor:pointer}
-        figure:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,.4)}
-        .ph{aspect-ratio:4/3;overflow:hidden;background:#0a0e13}
+        .hero{padding:36px 0;text-align:center;background:#fff;border-bottom:1px solid var(--line)}
+        h1{font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:10px}
+        .sub{max-width:820px;margin:0 auto;color:var(--muted);font-size:1.05rem}
+        .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px;padding:32px 0 48px}
+        figure{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:.2s}
+        figure:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,.08)}
+        figure a{display:block;color:inherit}
+        .ph{aspect-ratio:4/3;overflow:hidden;background:#f8f9fa}
         .ph img{width:100%;height:100%;object-fit:cover;display:block;transition:.3s}
         figure:hover .ph img{transform:scale(1.05)}
-        figcaption{padding:8px 10px 10px}
-        figcaption h3{font-size:.85rem}
-        figcaption p{font-size:.7rem;color:var(--muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-        footer{border-top:1px solid var(--line);padding:20px 0;color:var(--muted);font-size:.75rem;text-align:center}
-        .lb{display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:50;align-items:center;justify-content:center;flex-direction:column}
-        .lb.open{display:flex}
-        .lb img{max-width:92vw;max-height:82vh;object-fit:contain;border-radius:6px}
-        .lb-cap{margin-top:12px;color:#fff;font-size:.9rem;max-width:90vw;text-align:center}
-        .lb-close,.lb-prev,.lb-next{position:absolute;background:rgba(255,255,255,.12);border:none;color:#fff;font-size:1.4rem;width:44px;height:44px;border-radius:50%;cursor:pointer}
-        .lb-close{top:16px;right:16px}
-        .lb-prev{left:16px;top:50%;transform:translateY(-50%)}
-        .lb-next{right:16px;top:50%;transform:translateY(-50%)}
-        .lb-close:hover,.lb-prev:hover,.lb-next:hover{background:rgba(255,255,255,.3)}
+        figcaption{padding:10px 12px 14px}
+        figcaption h3{font-size:.9rem;margin-bottom:4px}
+        figcaption p{font-size:.75rem;color:var(--muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+        footer{border-top:1px solid var(--line);padding:22px 0;color:var(--muted);font-size:.9rem;text-align:center;background:#fff}
         @media(max-width:640px){.grid{grid-template-columns:1fr}.nav a{margin-left:12px;font-size:.85rem}}
     </style>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"WebSite","name":"Balaga Raghuram Images","url":"https://balagaraghuram-images.github.io/","description":"Welcome to the image gallery of Balaga Raghuram. Key photos: conferences at the University of Cambridge and Oxford, Manchester tech meetups and UK travel.","publisher":{"@type":"Person","name":"Balaga Raghuram","url":"https://balagaraghuram.github.io/"}}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"ImageGallery","name":"Balaga Raghuram Image Gallery","image":"https://balagaraghuram-images.github.io/images/balagaraghuram_cambridgeuniversity_conference.jpg","numberOfItems":41,"author":{"@type":"Person","name":"Balaga Raghuram","url":"https://balagaraghuram.github.io/"}}
+    </script>
 </head>
 <body>
     <header>
         <div class="wrap nav">
-            <a class="brand" href="./">balagaraghuram-images<span>.github.io</span></a>
+            <a class="brand" href="./">Welcome to Image Gallery of Balaga Raghuram</a>
             <nav>
-                <a href="#gallery">Gallery</a>
-                <a href="https://balagaraghuram.github.io/">Official Site</a>
-                <a href="https://github.com/balagaraghuram1">GitHub</a>
+                <a href="#gallery">All Photos</a>
+                <a href="https://balagaraghuram.github.io/">Blog</a>
                 <a href="https://uk.linkedin.com/in/balagaraghuram">LinkedIn</a>
             </nav>
         </div>
@@ -60,127 +64,59 @@
 
     <section class="hero">
         <div class="wrap">
-            <h1>Balaga <em>Raghuram</em> - Image Gallery</h1>
-            <p class="intro">Photos of Balaga Raghuram: conferences at Cambridge, Oxford and Edinburgh, Manchester tech meetups and UK travel.</p>
+            <h1>Welcome to Image Gallery of Balaga Raghuram</h1>
+            <p class="sub">Key Photos of Balaga Raghuram: participation in top conferences at University of Cambridge, Oxford and tech meetups and few travel etc</p>
         </div>
     </section>
 
     <main class="wrap" id="gallery">
-        <p class="count">Showing all 54 photos</p>
-        <div class="grid" id="grid"></div>
+        <div class="grid">
+        <figure><a href="photos/balaga-raghuram-00000img-00000-burst20240923145810-cover.html"><div class="ph"><img src="images/00000IMG_00000_BURST20240923145810_COVER.jpg" alt="Balaga Raghuram - 00000IMG 00000 BURST20240923145810 COVER" loading="lazy"></div><figcaption><h3>Balaga Raghuram - 00000IMG 00000 BURST20240923145810 COVER</h3><p>Balaga Raghuram - cover photo from his UK academic journey.</p></figcaption></a></figure>
+        <figure><a href="photos/balaga-raghuram-winter-school-university-of-edinburgh.html"><div class="ph"><img src="images/balaga%20raghuram_%20winter%20school%20university%20of%20edinburgh.jpg" alt="Balaga Raghuram - winter school university of edinburgh" loading="lazy"></div><figcaption><h3>Balaga Raghuram - winter school university of edinburgh</h3><p>Balaga Raghuram at the Winter School, University of Edinburgh - data science and AI.</p></figcaption></a></figure>
+        <figure><a href="photos/balaga-raghuram-zurich-international-airport.html"><div class="ph"><img src="images/balaga%20raghuram_zurich%20international%20airport.jpg" alt="Balaga Raghuram - zurich international airport" loading="lazy"></div><figcaption><h3>Balaga Raghuram - zurich international airport</h3><p>Balaga Raghuram at Zurich international airport - Switzerland travel.</p></figcaption></a></figure>
+        <figure><a href="photos/balaga-raghuram-cambridgeuniversity-conference.html"><div class="ph"><img src="images/balagaraghuram_cambridgeuniversity_conference.jpg" alt="Balaga Raghuram - cambridgeuniversity conference" loading="lazy"></div><figcaption><h3>Balaga Raghuram - cambridgeuniversity conference</h3><p>Balaga Raghuram at the University of Cambridge conference on data analytics and machine learning - September 2024.</p></figcaption></a></figure>
+        <figure><a href="photos/balaga-raghuram-lancaster-winter-school.html"><div class="ph"><img src="images/balagaraghuram_lancaster_winter_school.jpg" alt="Balaga Raghuram - lancaster winter school" loading="lazy"></div><figcaption><h3>Balaga Raghuram - lancaster winter school</h3><p>Balaga Raghuram at a funded winter school - Lancaster University, advanced programming and data science.</p></figcaption></a></figure>
+        <figure><a href="photos/balaga-raghuram-manchester-techmeetup.html"><div class="ph"><img src="images/balagaraghuram_manchester_techmeetup.jpg" alt="Balaga Raghuram - manchester techmeetup" loading="lazy"></div><figcaption><h3>Balaga Raghuram - manchester techmeetup</h3><p>Balaga Raghuram at a Manchester tech meetup - developers and AI enthusiasts.</p></figcaption></a></figure>
+        <figure><a href="photos/balaga-raghuram-manchester-techmeetup1.html"><div class="ph"><img src="images/balagaraghuram_manchester_techmeetup1.jpg" alt="Balaga Raghuram - manchester techmeetup1" loading="lazy"></div><figcaption><h3>Balaga Raghuram - manchester techmeetup1</h3><p>Balaga Raghuram at a Manchester tech meetup - tech community gathering.</p></figcaption></a></figure>
+        <figure><a href="photos/balaga-raghuram-newtoninstituteofmathematicssciences-universityofcambrdige.html"><div class="ph"><img src="images/balagaraghuram_newtoninstituteofmathematicssciences_universityofcambrdige.jpg" alt="Balaga Raghuram - newtoninstituteofmathematicssciences universityofcambrdige" loading="lazy"></div><figcaption><h3>Balaga Raghuram - newtoninstituteofmathematicssciences universityofcambrdige</h3><p>Balaga Raghuram at the Isaac Newton Institute, Cambridge - mathematical formulations and heuristic solutions.</p></figcaption></a></figure>
+        <figure><a href="photos/balaga-raghuram-newtoninstituteofmathematicssciences-universityofcambridge.html"><div class="ph"><img src="images/balagaraghuram_newtoninstituteofmathematicssciences_universityofcambridge.jpg" alt="Balaga Raghuram - newtoninstituteofmathematicssciences universityofcambridge" loading="lazy"></div><figcaption><h3>Balaga Raghuram - newtoninstituteofmathematicssciences universityofcambridge</h3><p>Balaga Raghuram at the Isaac Newton Institute for Mathematical Sciences, University of Cambridge.</p></figcaption></a></figure>
+        <figure><a href="photos/balaga-raghuram-oxford-university-conference1.html"><div class="ph"><img src="images/balagaraghuram_oxford_university_conference1.jpg" alt="Balaga Raghuram - oxford university conference1" loading="lazy"></div><figcaption><h3>Balaga Raghuram - oxford university conference1</h3><p>Balaga Raghuram at the Oxford University conference - academic session in Oxford.</p></figcaption></a></figure>
+        <figure><a href="photos/balaga-raghuram-oxford-university-conference2.html"><div class="ph"><img src="images/balagaraghuram_oxford_university_conference2.jpg" alt="Balaga Raghuram - oxford university conference2" loading="lazy"></div><figcaption><h3>Balaga Raghuram - oxford university conference2</h3><p>Balaga Raghuram at the Oxford University conference - presentation and discussions.</p></figcaption></a></figure>
+        <figure><a href="photos/balaga-raghuram-oxford-university-conference3.html"><div class="ph"><img src="images/balagaraghuram_oxford_university_conference3.jpg" alt="Balaga Raghuram - oxford university conference3" loading="lazy"></div><figcaption><h3>Balaga Raghuram - oxford university conference3</h3><p>Balaga Raghuram at the Oxford University conference - delegates and panel discussion.</p></figcaption></a></figure>
+        <figure><a href="photos/balaga-raghuram-oxford-university-conference4.html"><div class="ph"><img src="images/balagaraghuram_oxford_university_conference4.jpg" alt="Balaga Raghuram - oxford university conference4" loading="lazy"></div><figcaption><h3>Balaga Raghuram - oxford university conference4</h3><p>Balaga Raghuram at the Oxford University conference - Oxford campus photo.</p></figcaption></a></figure>
+        <figure><a href="photos/balaga-raghuram-oxford-university-forum.html"><div class="ph"><img src="images/balagaraghuram_oxford_university_forum.jpg" alt="Balaga Raghuram - oxford university forum" loading="lazy"></div><figcaption><h3>Balaga Raghuram - oxford university forum</h3><p>Balaga Raghuram at the Oxford University Forum - global experts on foresight and interdisciplinary research, Nov 2024.</p></figcaption></a></figure>
+        <figure><a href="photos/balaga-raghuram-oxford-university-forum1.html"><div class="ph"><img src="images/balagaraghuram_oxford_university_forum1.jpg" alt="Balaga Raghuram - oxford university forum1" loading="lazy"></div><figcaption><h3>Balaga Raghuram - oxford university forum1</h3><p>Balaga Raghuram at the Oxford University Forum - interdisciplinary research discussion, 2024.</p></figcaption></a></figure>
+        <figure><a href="photos/balaga-raghuram-oxford-university-forum2.html"><div class="ph"><img src="images/balagaraghuram_oxford_university_forum2.jpg" alt="Balaga Raghuram - oxford university forum2" loading="lazy"></div><figcaption><h3>Balaga Raghuram - oxford university forum2</h3><p>Balaga Raghuram at the Oxford University Forum - with global experts and researchers.</p></figcaption></a></figure>
+        <figure><a href="photos/balaga-raghuram-cambridge-university-conference.html"><div class="ph"><img src="images/balaga-raghuram-cambridge-university-conference.jpg" alt="Balaga Raghuram - cambridge-university-conference" loading="lazy"></div><figcaption><h3>Balaga Raghuram - cambridge-university-conference</h3><p>Balaga Raghuram at the University of Cambridge conference - research on machine learning and sustainable food systems.</p></figcaption></a></figure>
+        <figure><a href="photos/balaga-raghuram-canary-wharf.html"><div class="ph"><img src="images/balaga-raghuram-canary-wharf.jpg" alt="Balaga Raghuram - canary-wharf" loading="lazy"></div><figcaption><h3>Balaga Raghuram - canary-wharf</h3><p>Balaga Raghuram at Canary Wharf - London financial district photo.</p></figcaption></a></figure>
+        <figure><a href="photos/balaga-raghuram-canary-wharf-london.html"><div class="ph"><img src="images/balaga-raghuram-canary-wharf-london.jpg" alt="Balaga Raghuram - canary-wharf-london" loading="lazy"></div><figcaption><h3>Balaga Raghuram - canary-wharf-london</h3><p>Balaga Raghuram at Canary Wharf, London - exploring the financial district during UK travels.</p></figcaption></a></figure>
+        <figure><a href="photos/balaga-raghuram-edinburgh-early-morning.html"><div class="ph"><img src="images/balaga-raghuram-edinburgh-early-morning.jpg" alt="Balaga Raghuram - edinburgh-early-morning" loading="lazy"></div><figcaption><h3>Balaga Raghuram - edinburgh-early-morning</h3><p>Balaga Raghuram in Edinburgh early morning - views across the historic city, Scotland.</p></figcaption></a></figure>
+        <figure><a href="photos/balaga-raghuram-edinburgh-winter-school.html"><div class="ph"><img src="images/balaga-raghuram-edinburgh-winter-school.jpg" alt="Balaga Raghuram - edinburgh-winter-school" loading="lazy"></div><figcaption><h3>Balaga Raghuram - edinburgh-winter-school</h3><p>Balaga Raghuram at the funded Winter School, University of Edinburgh - advanced programming, data science and AI.</p></figcaption></a></figure>
+        <figure><a href="photos/balaga-raghuram-london-bridge-night.html"><div class="ph"><img src="images/balaga-raghuram-london-bridge-night.jpg" alt="Balaga Raghuram - london-bridge-night" loading="lazy"></div><figcaption><h3>Balaga Raghuram - london-bridge-night</h3><p>Balaga Raghuram near London Bridge at night - London skyline during UK travels.</p></figcaption></a></figure>
+        <figure><a href="photos/balaga-raghuram-london-bridge-night1.html"><div class="ph"><img src="images/balaga-raghuram-london-bridge-night1.jpg" alt="Balaga Raghuram - london-bridge-night1" loading="lazy"></div><figcaption><h3>Balaga Raghuram - london-bridge-night1</h3><p>Balaga Raghuram near London Bridge at night - Thames river view.</p></figcaption></a></figure>
+        <figure><a href="photos/balaga-raghuram-london-bridge-night2.html"><div class="ph"><img src="images/balaga-raghuram-london-bridge-night2.jpg" alt="Balaga Raghuram - london-bridge-night2" loading="lazy"></div><figcaption><h3>Balaga Raghuram - london-bridge-night2</h3><p>Balaga Raghuram near London Bridge at night - London city lights.</p></figcaption></a></figure>
+        <figure><a href="photos/balaga-raghuram-newton-institute-cambridge.html"><div class="ph"><img src="images/balaga-raghuram-newton-institute-cambridge.jpg" alt="Balaga Raghuram - newton-institute-cambridge" loading="lazy"></div><figcaption><h3>Balaga Raghuram - newton-institute-cambridge</h3><p>Raghuram Balaga at the Isaac Newton Institute for Mathematical Sciences, Cambridge.</p></figcaption></a></figure>
+        <figure><a href="photos/balaga-raghuram-oxford-university-forum-2.html"><div class="ph"><img src="images/balaga-raghuram-oxford-university-forum.jpg" alt="Balaga Raghuram - oxford-university-forum" loading="lazy"></div><figcaption><h3>Balaga Raghuram - oxford-university-forum</h3><p>Balaga Raghuram at the Oxford University Forum - foresight and interdisciplinary research.</p></figcaption></a></figure>
+        <figure><a href="photos/balaga-raghuram-uk-amazing-snow.html"><div class="ph"><img src="images/balaga-raghuram-uk-amazing-snow.jpg" alt="Balaga Raghuram - uk-amazing-snow" loading="lazy"></div><figcaption><h3>Balaga Raghuram - uk-amazing-snow</h3><p>Balaga Raghuram experiencing snow in the UK - rare snowfall during studies.</p></figcaption></a></figure>
+        <figure><a href="photos/balaga-raghuram-uk-snow-experience.html"><div class="ph"><img src="images/balaga-raghuram-uk-snow-experience.jpg" alt="Balaga Raghuram - uk-snow-experience" loading="lazy"></div><figcaption><h3>Balaga Raghuram - uk-snow-experience</h3><p>Balaga Raghuram experiencing UK snow - winter in the United Kingdom.</p></figcaption></a></figure>
+        <figure><a href="photos/balaga-raghuram-uob-museum.html"><div class="ph"><img src="images/balaga-raghuram-uob-museum.jpg" alt="Balaga Raghuram - uob-museum" loading="lazy"></div><figcaption><h3>Balaga Raghuram - uob-museum</h3><p>Balaga Raghuram at the University of Birmingham museum.</p></figcaption></a></figure>
+        <figure><a href="photos/balaga-raghuram-uob-museum-trex.html"><div class="ph"><img src="images/balaga-raghuram-uob-museum-trex.jpg" alt="Balaga Raghuram - uob-museum-trex" loading="lazy"></div><figcaption><h3>Balaga Raghuram - uob-museum-trex</h3><p>Balaga Raghuram at the University of Birmingham museum - T-Rex exhibit.</p></figcaption></a></figure>
+        <figure><a href="photos/balaga-raghuram-img-20241102-123623.html"><div class="ph"><img src="images/IMG_20241102_123623.jpg" alt="Balaga Raghuram - IMG 20241102 123623" loading="lazy"></div><figcaption><h3>Balaga Raghuram - IMG 20241102 123623</h3><p>Balaga Raghuram at a tech meetup in November 2024 - Manchester.</p></figcaption></a></figure>
+        <figure><a href="photos/balaga-raghuram-img-20241102-125855.html"><div class="ph"><img src="images/IMG_20241102_125855.jpg" alt="Balaga Raghuram - IMG 20241102 125855" loading="lazy"></div><figcaption><h3>Balaga Raghuram - IMG 20241102 125855</h3><p>Balaga Raghuram at a tech meetup in November 2024 - group photo.</p></figcaption></a></figure>
+        <figure><a href="photos/balaga-raghuram-img-20241102-132201-2-1.html"><div class="ph"><img src="images/IMG_20241102_132201~2%20(1).jpg" alt="Balaga Raghuram - IMG 20241102 132201 2 (1)" loading="lazy"></div><figcaption><h3>Balaga Raghuram - IMG 20241102 132201 2 (1)</h3><p>Balaga Raghuram at a tech meetup in November 2024 - Manchester tech community.</p></figcaption></a></figure>
+        <figure><a href="photos/balaga-raghuram-manchester-tech-meet-up.html"><div class="ph"><img src="images/manchester%20tech%20meet%20up.jpg" alt="Balaga Raghuram - manchester tech meet up" loading="lazy"></div><figcaption><h3>Balaga Raghuram - manchester tech meet up</h3><p>Balaga Raghuram at a Manchester tech meetup - London and Manchester tech scene.</p></figcaption></a></figure>
+        <figure><a href="photos/balaga-raghuram-manchester-tech-meet2.html"><div class="ph"><img src="images/manchester%20tech%20meet2.jpg" alt="Balaga Raghuram - manchester tech meet2" loading="lazy"></div><figcaption><h3>Balaga Raghuram - manchester tech meet2</h3><p>Balaga Raghuram at a Manchester tech meetup - networking with developers.</p></figcaption></a></figure>
+        <figure><a href="photos/balaga-raghuram-oxford1.html"><div class="ph"><img src="images/oxford1.jpg" alt="Balaga Raghuram - oxford1" loading="lazy"></div><figcaption><h3>Balaga Raghuram - oxford1</h3><p>Balaga Raghuram at Oxford University - conference photo.</p></figcaption></a></figure>
+        <figure><a href="photos/balaga-raghuram-oxford2.html"><div class="ph"><img src="images/oxford2.jpg" alt="Balaga Raghuram - oxford2" loading="lazy"></div><figcaption><h3>Balaga Raghuram - oxford2</h3><p>Balaga Raghuram at Oxford University - during the academic conference.</p></figcaption></a></figure>
+        <figure><a href="photos/balaga-raghuram-oxford3.html"><div class="ph"><img src="images/oxford3.jpg" alt="Balaga Raghuram - oxford3" loading="lazy"></div><figcaption><h3>Balaga Raghuram - oxford3</h3><p>Balaga Raghuram at Oxford University - session with researchers.</p></figcaption></a></figure>
+        <figure><a href="photos/balaga-raghuram-oxford4.html"><div class="ph"><img src="images/oxford4.jpg" alt="Balaga Raghuram - oxford4" loading="lazy"></div><figcaption><h3>Balaga Raghuram - oxford4</h3><p>Balaga Raghuram at Oxford University - campus visit.</p></figcaption></a></figure>
+        <figure><a href="photos/balaga-raghuram-winterschool1.html"><div class="ph"><img src="images/winterschool1.jpg" alt="Balaga Raghuram - winterschool1" loading="lazy"></div><figcaption><h3>Balaga Raghuram - winterschool1</h3><p>Balaga Raghuram at the winter school - machine learning and data science sessions.</p></figcaption></a></figure>
+        <figure><a href="photos/balaga-raghuram-winterschool2.html"><div class="ph"><img src="images/winterschool2.jpg" alt="Balaga Raghuram - winterschool2" loading="lazy"></div><figcaption><h3>Balaga Raghuram - winterschool2</h3><p>Balaga Raghuram at the winter school - study group and workshops.</p></figcaption></a></figure>
+        </div>
     </main>
 
     <footer>
-        <div class="wrap">&copy; 2026 Balaga Raghuram - <a href="https://balagaraghuram.github.io/">balagaraghuram.github.io</a> - Images indexed for Google Images search</div>
+        For details of the conferences etc., visit the blog: <a href="https://balagaraghuram.github.io/">balagaraghuram.github.io</a>
     </footer>
-
-    <div class="lb" id="lb">
-        <button class="lb-close" id="lbClose" aria-label="Close">&times;</button>
-        <button class="lb-prev" id="lbPrev" aria-label="Previous">&#10094;</button>
-        <button class="lb-next" id="lbNext" aria-label="Next">&#10095;</button>
-        <img id="lbImg" src="" alt="">
-        <div class="lb-cap" id="lbCap"></div>
-    </div>
-
-    <script>
-        const images = [
-            {src:'images/00000IMG_00000_BURST20240923145810_COVER.jpg', alt:'Balaga Raghuram at 00000IMG 00000 BURST20240923145810 COVER', title:'Balaga Raghuram - 00000IMG 00000 BURST20240923145810 COVER'},
-            {src:'images/balaga%20raghuram_%20winter%20school%20university%20of%20edinburgh.jpg', alt:'Balaga Raghuram at winter school university of edinburgh', title:'Balaga Raghuram - winter school university of edinburgh'},
-            {src:'images/balaga%20raghuram_zurich%20international%20airport.jpg', alt:'Balaga Raghuram at zurich international airport', title:'Balaga Raghuram - zurich international airport'},
-            {src:'images/balagaraghuram_cambridgeuniversity_conference.jpg', alt:'Balaga Raghuram at cambridgeuniversity conference', title:'Balaga Raghuram - cambridgeuniversity conference'},
-            {src:'images/balagaraghuram_lancaster_winter_school.jpg', alt:'Balaga Raghuram at lancaster winter school', title:'Balaga Raghuram - lancaster winter school'},
-            {src:'images/balagaraghuram_manchester_techmeetup.jpg', alt:'Balaga Raghuram at manchester techmeetup', title:'Balaga Raghuram - manchester techmeetup'},
-            {src:'images/balagaraghuram_manchester_techmeetup1.jpg', alt:'Balaga Raghuram at manchester techmeetup1', title:'Balaga Raghuram - manchester techmeetup1'},
-            {src:'images/balagaraghuram_newtoninstituteofmathematicssciences_universityofcambrdige.jpg', alt:'Balaga Raghuram at newtoninstituteofmathematicssciences universityofcambrdige', title:'Balaga Raghuram - newtoninstituteofmathematicssciences universityofcambrdige'},
-            {src:'images/balagaraghuram_newtoninstituteofmathematicssciences_universityofcambridge.jpg', alt:'Balaga Raghuram at newtoninstituteofmathematicssciences universityofcambridge', title:'Balaga Raghuram - newtoninstituteofmathematicssciences universityofcambridge'},
-            {src:'images/balagaraghuram_oxford_university_conference1.jpg', alt:'Balaga Raghuram at oxford university conference1', title:'Balaga Raghuram - oxford university conference1'},
-            {src:'images/balagaraghuram_oxford_university_conference2.jpg', alt:'Balaga Raghuram at oxford university conference2', title:'Balaga Raghuram - oxford university conference2'},
-            {src:'images/balagaraghuram_oxford_university_conference3.jpg', alt:'Balaga Raghuram at oxford university conference3', title:'Balaga Raghuram - oxford university conference3'},
-            {src:'images/balagaraghuram_oxford_university_conference4.jpg', alt:'Balaga Raghuram at oxford university conference4', title:'Balaga Raghuram - oxford university conference4'},
-            {src:'images/balagaraghuram_oxford_university_forum.jpg', alt:'Balaga Raghuram at oxford university forum', title:'Balaga Raghuram - oxford university forum'},
-            {src:'images/balagaraghuram_oxford_university_forum1.jpg', alt:'Balaga Raghuram at oxford university forum1', title:'Balaga Raghuram - oxford university forum1'},
-            {src:'images/balagaraghuram_oxford_university_forum2.jpg', alt:'Balaga Raghuram at oxford university forum2', title:'Balaga Raghuram - oxford university forum2'},
-            {src:'images/balagaraghuram_universityofbirmingham.jpg', alt:'Balaga Raghuram at universityofbirmingham', title:'Balaga Raghuram - universityofbirmingham'},
-            {src:'images/balaga-raghuram-cambridge-university-conference.jpg', alt:'Balaga Raghuram at cambridge university conference', title:'Balaga Raghuram - cambridge university conference'},
-            {src:'images/balaga-raghuram-canary-wharf.jpg', alt:'Balaga Raghuram at canary wharf', title:'Balaga Raghuram - canary wharf'},
-            {src:'images/balaga-raghuram-canary-wharf-london.jpg', alt:'Balaga Raghuram at canary wharf london', title:'Balaga Raghuram - canary wharf london'},
-            {src:'images/balaga-raghuram-edinburgh-early-morning.jpg', alt:'Balaga Raghuram at edinburgh early morning', title:'Balaga Raghuram - edinburgh early morning'},
-            {src:'images/balaga-raghuram-edinburgh-winter-school.jpg', alt:'Balaga Raghuram at edinburgh winter school', title:'Balaga Raghuram - edinburgh winter school'},
-            {src:'images/balaga-raghuram-gcp-cloud-run.jpg', alt:'Balaga Raghuram at gcp cloud run', title:'Balaga Raghuram - gcp cloud run'},
-            {src:'images/balaga-raghuram-google-cloud.jpg', alt:'Balaga Raghuram at google cloud', title:'Balaga Raghuram - google cloud'},
-            {src:'images/balaga-raghuram-london-bridge-night.jpg', alt:'Balaga Raghuram at london bridge night', title:'Balaga Raghuram - london bridge night'},
-            {src:'images/balaga-raghuram-london-bridge-night1.jpg', alt:'Balaga Raghuram at london bridge night1', title:'Balaga Raghuram - london bridge night1'},
-            {src:'images/balaga-raghuram-london-bridge-night2.jpg', alt:'Balaga Raghuram at london bridge night2', title:'Balaga Raghuram - london bridge night2'},
-            {src:'images/balaga-raghuram-newton-institute-cambridge.jpg', alt:'Balaga Raghuram at newton institute cambridge', title:'Balaga Raghuram - newton institute cambridge'},
-            {src:'images/balaga-raghuram-nhs.jpg', alt:'Balaga Raghuram at nhs', title:'Balaga Raghuram - nhs'},
-            {src:'images/balaga-raghuram-oxford-university-forum.jpg', alt:'Balaga Raghuram at oxford university forum', title:'Balaga Raghuram - oxford university forum'},
-            {src:'images/balaga-raghuram-uk-amazing-snow.jpg', alt:'Balaga Raghuram at uk amazing snow', title:'Balaga Raghuram - uk amazing snow'},
-            {src:'images/balaga-raghuram-uk-snow-experience.jpg', alt:'Balaga Raghuram at uk snow experience', title:'Balaga Raghuram - uk snow experience'},
-            {src:'images/balaga-raghuram-uob-museum.jpg', alt:'Balaga Raghuram at uob museum', title:'Balaga Raghuram - uob museum'},
-            {src:'images/balaga-raghuram-uob-museum-trex.jpg', alt:'Balaga Raghuram at uob museum trex', title:'Balaga Raghuram - uob museum trex'},
-            {src:'images/bignewsnetwork_dubaimedia_1.png', alt:'Balaga Raghuram at bignewsnetwork dubaimedia 1', title:'Balaga Raghuram - bignewsnetwork dubaimedia 1'},
-            {src:'images/bignewsnetwork_dubaimedia2.png', alt:'Balaga Raghuram at bignewsnetwork dubaimedia2', title:'Balaga Raghuram - bignewsnetwork dubaimedia2'},
-            {src:'images/happy%20new%20year1.png', alt:'Balaga Raghuram at happy new year1', title:'Balaga Raghuram - happy new year1'},
-            {src:'images/IMG_20241102_123623.jpg', alt:'Balaga Raghuram at IMG 20241102 123623', title:'Balaga Raghuram - IMG 20241102 123623'},
-            {src:'images/IMG_20241102_125855.jpg', alt:'Balaga Raghuram at IMG 20241102 125855', title:'Balaga Raghuram - IMG 20241102 125855'},
-            {src:'images/IMG_20241102_132201~2%20(1).jpg', alt:'Balaga Raghuram at IMG 20241102 132201~2 (1)', title:'Balaga Raghuram - IMG 20241102 132201~2 (1)'},
-            {src:'images/logo-abudhabi-reporter.jpg', alt:'Balaga Raghuram at logo abudhabi reporter', title:'Balaga Raghuram - logo abudhabi reporter'},
-            {src:'images/logo-bignewsnetwork.png', alt:'Balaga Raghuram at logo bignewsnetwork', title:'Balaga Raghuram - logo bignewsnetwork'},
-            {src:'images/logo-estate-magazine.jpg', alt:'Balaga Raghuram at logo estate magazine', title:'Balaga Raghuram - logo estate magazine'},
-            {src:'images/logo-menafn.jpg', alt:'Balaga Raghuram at logo menafn', title:'Balaga Raghuram - logo menafn'},
-            {src:'images/manchester%20tech%20meet%20up.jpg', alt:'Balaga Raghuram at manchester tech meet up', title:'Balaga Raghuram - manchester tech meet up'},
-            {src:'images/manchester%20tech%20meet2.jpg', alt:'Balaga Raghuram at manchester tech meet2', title:'Balaga Raghuram - manchester tech meet2'},
-            {src:'images/new%20year%20poster.jpg', alt:'Balaga Raghuram at new year poster', title:'Balaga Raghuram - new year poster'},
-            {src:'images/oxford1.jpg', alt:'Balaga Raghuram at oxford1', title:'Balaga Raghuram - oxford1'},
-            {src:'images/oxford2.jpg', alt:'Balaga Raghuram at oxford2', title:'Balaga Raghuram - oxford2'},
-            {src:'images/oxford3.jpg', alt:'Balaga Raghuram at oxford3', title:'Balaga Raghuram - oxford3'},
-            {src:'images/oxford4.jpg', alt:'Balaga Raghuram at oxford4', title:'Balaga Raghuram - oxford4'},
-            {src:'images/poster.png', alt:'Balaga Raghuram at poster', title:'Balaga Raghuram - poster'},
-            {src:'images/winterschool1.jpg', alt:'Balaga Raghuram at winterschool1', title:'Balaga Raghuram - winterschool1'},
-            {src:'images/winterschool2.jpg', alt:'Balaga Raghuram at winterschool2', title:'Balaga Raghuram - winterschool2'},
-        ];
-        const grid = document.getElementById('grid');
-        const lb = document.getElementById('lb'), lbImg = document.getElementById('lbImg'), lbCap = document.getElementById('lbCap');
-        let idx = 0;
-
-        function renderGallery() {
-            grid.innerHTML = '';
-            images.forEach((img) => {
-                const figure = document.createElement('figure');
-                const ph = document.createElement('div'); ph.className = 'ph';
-                const image = document.createElement('img');
-                image.src = img.src; image.alt = img.alt; image.loading = 'lazy';
-                ph.appendChild(image);
-                const cap = document.createElement('figcaption');
-                const h3 = document.createElement('h3'); h3.textContent = img.title;
-                cap.appendChild(h3);
-                figure.appendChild(ph); figure.appendChild(cap);
-                image.addEventListener('click', () => {
-                    idx = images.indexOf(img);
-                    show();
-                });
-                grid.appendChild(figure);
-            });
-        }
-
-        function show() {
-            const img = images[idx];
-            lbImg.src = img.src;
-            lbImg.alt = img.alt;
-            lbCap.textContent = img.title;
-            lb.classList.add('open');
-        }
-        document.getElementById('lbClose').onclick = () => lb.classList.remove('open');
-        document.getElementById('lbPrev').onclick = e => { e.stopPropagation(); idx = (idx - 1 + images.length) % images.length; show(); };
-        document.getElementById('lbNext').onclick = e => { e.stopPropagation(); idx = (idx + 1) % images.length; show(); };
-        lb.addEventListener('click', e => { if (e.target === lb) lb.classList.remove('open'); });
-        document.addEventListener('keydown', e => {
-            if (!lb.classList.contains('open')) return;
-            if (e.key === 'Escape') lb.classList.remove('open');
-            if (e.key === 'ArrowLeft') { idx = (idx - 1 + images.length) % images.length; show(); }
-            if (e.key === 'ArrowRight') { idx = (idx + 1) % images.length; show(); }
-        });
-        renderGallery();
-    </script>
 </body>
 </html>
